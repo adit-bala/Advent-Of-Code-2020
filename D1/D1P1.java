@@ -64,7 +64,7 @@ class D1P1 {
 
 	public static void main(String args[]) {
 		D1P1 solution = new D1P1();
-		solution.readInfo(System.getProperty("user.dir")+ "/src/D1/D1P1&P2Input");
+		solution.readInfo(System.getProperty("user.dir")+ "/src/Input/D1Input");
 		solution.solve();
 		
 	}

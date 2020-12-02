@@ -9,6 +9,14 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+//Adit Bala, 12/1, Day 1, Problem 2
+
+/*
+* Find 3 numbers from a list of numbers that add up 
+* to 2020 and return the number they multiply to
+* 
+*/
+
 public class D1P2 {
 
 	private Set<Integer> findNum;
@@ -58,7 +66,7 @@ public class D1P2 {
 
 	public static void main(String args[]) {
 		D1P2 solution = new D1P2();
-		solution.readInfo(System.getProperty("user.dir")+ "/src/D1/D1P1&P2Input");
+		solution.readInfo(System.getProperty("user.dir")+ "/src/Input/D1Input");
 		solution.solve();
 		
 	}
