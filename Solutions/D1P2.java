@@ -22,20 +22,16 @@ public class D1P2 {
 	private Set<Integer> findNum;
 	private ArrayList<Integer> numList;
 	private int[] solution;
-	private boolean check;
-	
 	public D1P2() {
 		findNum = new HashSet<Integer>();
 		numList= new ArrayList<Integer>();
 		solution = new int[3];
-		check = false;
 	}
 	public void solve() {
 		for(int i=0; i<numList.size(); i++) {
 			findNum.add(numList.get(i));
 			for(int j=i+1; j<numList.size(); j++) {
 				if(findNum.contains(2020-numList.get(i)-numList.get(j))) {
-					check = true;
 					solution[0] = numList.get(i);
 					solution[1] = numList.get(j);
 					solution[2] = 2020 - numList.get(i) - numList.get(j);

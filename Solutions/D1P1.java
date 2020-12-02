@@ -7,7 +7,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 
@@ -23,18 +22,14 @@ class D1P1 {
 	private Set<Integer> findNum;
 	private ArrayList<Integer> numList;
 	private int[] solution;
-	private boolean check;
-	
 	public D1P1() {
 		findNum = new HashSet<Integer>();
 		numList= new ArrayList<Integer>();
 		solution = new int[2];
-		check = false;
 	}
 	public void solve() {
 		for(int i=0; i<numList.size(); i++) {
 			if(findNum.contains(2020-numList.get(i))) {
-				check = true;
 				solution[0] = numList.get(i);
 				solution[1] = 2020 - numList.get(i);
 				System.out.print(solution[0] * solution[1]);
