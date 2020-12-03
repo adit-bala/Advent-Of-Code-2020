@@ -7,6 +7,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+//Adit Bala, 12/3, Day 3, Problem 1
+
+/*
+* Based on diff slopes, traverse across the char[][]
+* to see if a '#' occurs
+* 
+*/
+
 public class D3P2 {
 	private ArrayList<String> charList;
 	private char[][] biome;

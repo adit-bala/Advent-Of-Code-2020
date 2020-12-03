@@ -7,6 +7,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+//Adit Bala, 12/1, Day 2, Problem 2
+
+/*
+* Determine validity of passwords by seeing if 
+* char exists in least, most positions
+* 
+*/
+
 public class D2P2 {
 	private ArrayList<String> numList;
 	private int numOccur[];

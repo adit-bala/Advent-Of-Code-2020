@@ -8,6 +8,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+//Adit Bala, 12/3, Day 3, Problem 1
+
+/*
+* Based on a slope, traverse across the char[][]
+* to see if a '#' occurs
+* 
+*/
+
 public class D3P1 {
 	private ArrayList<String> charList;
 	private char[][] biome;

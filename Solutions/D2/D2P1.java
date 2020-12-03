@@ -7,6 +7,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+//Adit Bala, 12/2, Day 2, Problem 1
+
+/*
+* Determine validity of passwords by seeing if 
+* key char occurs lowerBound < x < upperBound
+* 
+*/
+
 public class D2P1 {
 	private ArrayList<String> numList;
 	private int numOccur[];
