@@ -32,7 +32,7 @@ public class D3P1 {
 		int ySlope = 0;
 		
 		while(ySlope < charList.size()) {
-			if(biome[ySlope][xSlope % biome[0].length]	 == '#') {
+			if(biome[ySlope][xSlope % biome[0].length] == '#') {
 				trees++;
 			}
 			xSlope+=3;
