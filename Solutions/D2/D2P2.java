@@ -1,4 +1,4 @@
-package Solutions;
+package Solutions.D2;
 
 import java.io.BufferedReader;
 import java.io.File;
