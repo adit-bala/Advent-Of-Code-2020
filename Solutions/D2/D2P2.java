@@ -7,11 +7,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-//Adit Bala, 12/1, Day 2, Problem 2
+//Adit Bala, 12/2, Day 2, Problem 2
 
 /*
 * Determine validity of passwords by seeing if 
-* char exists in least, most positions
+* key char exists in certain positions
 * 
 */
 
