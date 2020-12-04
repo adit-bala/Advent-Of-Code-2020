@@ -9,6 +9,14 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+//Adit Bala, 12/4, Day 5, Problem 2
+
+/*
+* Iterator over a list of passport objects and
+* determine the validity with certain criteria
+* 
+*/
+
 public class D4P2 {
 	private ArrayList<String> passList;
 	private static final List<String> validKeys = Arrays.asList("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid");
