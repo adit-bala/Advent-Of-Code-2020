@@ -58,7 +58,7 @@ public class D5P2 {
 		for(int i=0; i < arr.length; i++) {
 			System.out.println(arr[i]);
 			if((arr[i] + 1) != arr[i+1]) {
-				System.out.println("ANSWER IS: " + arr[i] + 1);
+				System.out.println("ANSWER IS: " + (arr[i] + 1));
 			}
 		}
 		
