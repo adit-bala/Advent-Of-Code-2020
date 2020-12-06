@@ -28,44 +28,56 @@ public class D5P1 {
 	}
 
 	public void solve() {
+		
 		for (String pass : stringList) {
-			int row = 0;
-			boolean start = true;
-			for (int i = 0; i < pass.length(); i++) {
-				if (pass.charAt(i) == 'B' && start) {
-					row++;
-				} else if (pass.charAt(i) == 'F') {
-					start = false;
-				}
-				if (row > highFreq) {
-					if (pass.chars().filter(ch -> ch == 'B').count() > currSol.chars().filter(ch -> ch == 'B')
-							.count()) {
-						currSol = pass;
-						highFreq = row;
-					}
-
-				}
+			int row = Integer.parseInt(pass.substring(0, 7).replaceAll("F", "0").replaceAll("B", "1"), 2);
+			int col = Integer.parseInt(pass.substring(7).replaceAll("L", "0").replaceAll("R", "1"), 2);
+			int seatID = row * 8 + col;
+			if(seatID > highFreq) {
+				highFreq = seatID;
 			}
 		}
-
-		System.out.println(currSol);
-		int minRow = 0;
-		int maxRow = 127;
-		int minCol = 0;
-		int maxCol = 7;
-		for (char a : currSol.toCharArray()) {
-			if (a == 'F') {
-				maxRow -= (maxRow - minRow) / 2 + 1;
-			} else if (a == 'B') {
-				minRow += (maxRow - minRow) / 2 + 1;
-			} else if (a == 'L') {
-				maxCol -= (maxCol - minCol) / 2 + 1;
-			} else if (a == 'R'){
-				minCol += (maxCol - minCol) / 2 + 1;
-			}
-
-		}
-		System.out.print(minRow * 8 + minCol);
+		
+		System.out.print(highFreq);
+		
+//		for (String pass : stringList) {
+//			int row = 0;
+//			boolean start = true;
+//			for (int i = 0; i < pass.length(); i++) {
+//				if (pass.charAt(i) == 'B' && start) {
+//					row++;
+//				} else if (pass.charAt(i) == 'F') {
+//					start = false;
+//				}
+//				if (row > highFreq) {
+//					if (pass.chars().filter(ch -> ch == 'B').count() > currSol.chars().filter(ch -> ch == 'B')
+//							.count()) {
+//						currSol = pass;
+//						highFreq = row;
+//					}
+//
+//				}
+//			}
+//		}
+//
+//		System.out.println(currSol);
+//		int minRow = 0;
+//		int maxRow = 127;
+//		int minCol = 0;
+//		int maxCol = 7;
+//		for (char a : currSol.toCharArray()) {
+//			if (a == 'F') {
+//				maxRow -= (maxRow - minRow) / 2 + 1;
+//			} else if (a == 'B') {
+//				minRow += (maxRow - minRow) / 2 + 1;
+//			} else if (a == 'L') {
+//				maxCol -= (maxCol - minCol) / 2 + 1;
+//			} else if (a == 'R'){
+//				minCol += (maxCol - minCol) / 2 + 1;
+//			}
+//
+//		}
+//		System.out.print(minRow * 8 + minCol);
 
 	}
 
