@@ -29,6 +29,8 @@ public class D5P1 {
 
 	public void solve() {
 		
+		//NEW SOLUTION
+		
 		for (String pass : stringList) {
 			int row = Integer.parseInt(pass.substring(0, 7).replaceAll("F", "0").replaceAll("B", "1"), 2);
 			int col = Integer.parseInt(pass.substring(7).replaceAll("L", "0").replaceAll("R", "1"), 2);
@@ -39,6 +41,8 @@ public class D5P1 {
 		}
 		
 		System.out.print(highFreq);
+		
+// 		OLD SOLUTION
 		
 //		for (String pass : stringList) {
 //			int row = 0;
