@@ -35,28 +35,14 @@ public class D5P2 {
 		int place = 0;
 		arr = new int[stringList.size()];
 		for (String pass : stringList) {
-			int minRow = 0;
-			int maxRow = 127;
-			int minCol = 0;
-			int maxCol = 7;
-			for (char a : pass.toCharArray()) {
-				if (a == 'F') {
-					maxRow -= (maxRow - minRow) / 2 + 1;
-				} else if (a == 'B') {
-					minRow += (maxRow - minRow) / 2 + 1;
-				} else if (a == 'L') {
-					maxCol -= (maxCol - minCol) / 2 + 1;
-				} else if (a == 'R'){
-					minCol += (maxCol - minCol) / 2 + 1;
-				}
-			}
-			arr[place] = minRow * 8 + minCol;			
+			int row = Integer.parseInt(pass.substring(0, 7).replaceAll("F", "0").replaceAll("B", "1"), 2);
+			int col = Integer.parseInt(pass.substring(7).replaceAll("L", "0").replaceAll("R", "1"), 2);
+			arr[place] = row * 8 + col;			
 			place++;
 		}
 		
 		Arrays.sort(arr);
 		for(int i=0; i < arr.length; i++) {
-			System.out.println(arr[i]);
 			if((arr[i] + 1) != arr[i+1]) {
 				System.out.println("ANSWER IS: " + (arr[i] + 1));
 			}
