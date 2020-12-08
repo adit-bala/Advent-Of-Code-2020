@@ -3,10 +3,7 @@ package Solutions.D6;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.regex.Pattern;
@@ -18,12 +15,9 @@ public class D6P1 {
 	public D6P1() {
 		queList = new ArrayList<String>();
 		sols = 0;
-		
 	}
 
 	public void solve() {
-		
-		
 		for(String numQ: queList) {
 			numQ = numQ.replace("\n", "").replace("\r", "");
 			Set<Character> nums = new HashSet<Character>();
@@ -33,7 +27,6 @@ public class D6P1 {
 			 sols += nums.size();
 		}	
 		System.out.print(sols);
-		
 	}
 
 	
@@ -46,12 +39,11 @@ public class D6P1 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String line;
 		while (inFile.hasNext()) {
 			queList.add(inFile.next());
 		}
 	}
-
+	
 	public static void main(String args[]) {
 		D6P1 solution = new D6P1();
 		solution.readInfo(System.getProperty("user.dir") + "/src/Input/D6Input");
