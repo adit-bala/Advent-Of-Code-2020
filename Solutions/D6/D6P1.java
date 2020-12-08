@@ -28,9 +28,7 @@ public class D6P1 {
 			numQ = numQ.replace("\n", "").replace("\r", "");
 			Set<Character> nums = new HashSet<Character>();
 			 for(int i=0; i<numQ.length(); i++) {
-				 if(!nums.contains(numQ.charAt(i))) {
-					 nums.add(numQ.charAt(i));
-				 }
+				 nums.add(numQ.charAt(i));
 			 }
 			 sols += nums.size();
 		}	
