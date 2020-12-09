@@ -35,7 +35,7 @@ public class D7P2 {
 				test = bag;
 			}
 		}
-		System.out.println(test);
+//		System.out.println(test);
 		String[] allBags = test.substring(test.indexOf("contain") + 7, test.length() - 1).replaceAll("bags", "bag")
 				.split(",");
 		int[] numBags = new int[allBags.length];
@@ -48,19 +48,6 @@ public class D7P2 {
 			sol += numBags[j] * Search(allBags[j]);
 		}
 		return sol;
-	}
-
-	public boolean noBag(String rule) {
-		if (rule.contains("no other bags")) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	public String[] findColor(String rule) {
-		return rule.substring(rule.indexOf("contain") + 7, rule.length() - 2).replaceAll("bags", "bag").split(",");
-
 	}
 
 	public void readInfo(String fileName) {
